@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Dialogs</title>
+	<style>
+		.dialog {
+			display: none;
+			padding: 20px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px #888888;
+			width: 400px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.dialog.active {
+			display: block;
+		}
+
+		.button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="dialog1" class="dialog active">
+		<h2>Dialog 1</h2>
+		<p>This is the first dialog.</p>
+		<button id="next1" class="button">Next</button>
+	</div>
+	<div id="dialog2" class="dialog">
+		<h2>Dialog 2</h2>
+		<p>This is the second dialog.</p>
+		<button id="next2" class="button">Next</button>
+	</div>
+	<div id="dialog3" class="dialog">
+		<h2>Dialog 3</h2>
+		<p>This is the third dialog.</p>
+		<button id="play" class="button">Play</button>
+	</div>
+
+	<script>
+		// Get the dialog elements
+		var dialog1 = document.getElementById("dialog1");
+		var dialog2 = document.getElementById("dialog2");
+		var dialog3 = document.getElementById("dialog3");
+
+		// Get the next button elements
+		var next1 = document.getElementById("next1");
+		var next2 = document.getElementById("next2");
+
+		// Add event listeners to the next buttons
+		next1.addEventListener("click", function() {
+			dialog1.classList.remove("active");
+			dialog2.classList.add("active");
+		});
+
+		next2.addEventListener("click", function() {
+			dialog2.classList.remove("active");
+			dialog3.classList.add("active");
+		});
+
+		// Add event listener to the play button
+		play.addEventListener("click", function() {
+			// Replace the URL with the desired site address
+			window.location.href = "https://zep.us";
+		});
+	</script>
+</body>
+</html>
